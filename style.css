@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+--bg:#0b0c0f;
+--neon:#00F5A0;
+}
+
+
+html,body,#__next{height:100%;}
+body{
+background: radial-gradient(ellipse at top left, #0f1115 0%, #0b0c0f 40%, #070708 100%);
+color: #e6e6e6;
+font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+
+/* small helper to center content */
+.container-wide{max-width:1200px;margin:0 auto;padding:2rem;}
+
+
+/* Avatar ring (we use an SVG so it's crisp) */
+.avatar-wrap{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center}
+.avatar-img{width:240px;height:240px;border-radius:9999px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+
+/* for smaller screens */
+@media (max-width:768px){
+.avatar-wrap{width:220px;height:220px}
+.avatar-img{width:140px;height:140px}
+}
